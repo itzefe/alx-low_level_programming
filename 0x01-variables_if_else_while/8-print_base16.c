@@ -5,24 +5,31 @@
  * Return: Always 0 (success)
  */
 
-int main(void)
+
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+void ft_print_hex(void)
 {
 	char c;
 
-	int d;
-
+	c = '0';
+	while (c <= '9')
+	{
+		ft_putchar(c);
+		c++;
+	}
 	c = 'a';
-	d = 0;
-	while
-		(d < 10) {
-			putchar(d + '0');
-			d++
-		}
-	while
-		(c <= 'f') {
-			putchar(c);
-			c++;
-		}
-	putchar('\n');
+	while (c <= 'f')
+	{
+		ft_putchar(c);
+		c++;
+	}
+}
+int main(void)
+{
+	ft_print_hex();
+	ft_putchar('\n');
 	return (0);
 }
