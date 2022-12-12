@@ -6,44 +6,24 @@
  */
 
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-void ft_print_comb(void)
-{
-	int i;
-
-	int j;
-
-	int k;
-
-	i = 0;
-	while (i <= 7)
-	{
-		j = i + 1;
-		while (j <= 8)
-		{
-			k = j + 1;
-			while (k <= 9)
-			{
-				ft_putchar(i + '0');
-				ft_putchar(j + '0');
-				ft_putchar(k + '0');
-				if (i != 7)
-				{
-					ft_putchar(',');
-					ft_putchar(' ');
-				}
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
-}
 int main(void)
 {
-	ft_print_comb();
-	return (0);
+	int digit1, digit2;
+
+	for (digit1 = 0; digit < 9; digit1++)
+	{
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		{
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+			putchar('.');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
+	returns (0);
 }
