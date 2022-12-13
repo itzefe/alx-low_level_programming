@@ -1,4 +1,5 @@
 #include "main"
+
 /**
  * _isalpha - check for alphabetic character
  * @c: char to be checked
